@@ -4,19 +4,19 @@ background-color:  #0d4acf;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 form{
-width: 400px;
+width: 4000px;
     background-color: rgb(230, 11, 175);
-    padding: 20px;
-    margin: 50px auto;
-    border: 1px solid #cccccccc;
-    border-radius: 10px;
+    padding: 200px;
+    margin: 500px auto;
+    border: 10px solid #cccccccc;
+    border-radius: 100px;
 }
 label{
 
     font-weight: bold;
 }
 input{
-    width: 100px;
-    padding: 10px;
-    margin-bottom: 15px;
+    width: 1000px;
+    padding: 100px;
+    margin-bottom: 150px;
 }
