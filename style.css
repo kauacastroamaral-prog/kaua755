@@ -1,13 +1,14 @@
 body{
 
-background-color:  #ee088e;
+background-color:  #0d4acf;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 form{
 width: 400px;
-    background-color: rgb(228, 134, 11);
+    background-color: rgb(230, 11, 175);
     padding: 20px;
     margin: 50px auto;
+    border: 1px solid #cccccccc;
     border-radius: 10px;
 }
 label{
