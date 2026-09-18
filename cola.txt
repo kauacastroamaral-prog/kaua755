@@ -1,0 +1,398 @@
+body
+-> Seleciona o corpo inteiro da página.
+-> Tudo que aparece visualmente normalmente fica dentro dele.
+
+form
+-> Seleciona todos os elementos <form>.
+
+h1
+-> Seleciona todos os títulos <h1>.
+
+label
+-> Seleciona todos os <label>.
+
+input
+-> Seleciona todos os <input>.
+
+button
+-> Seleciona todos os <button>.
+
+input:focus
+-> Seleciona o input SOMENTE quando ele está em foco.
+-> Exemplo: quando o usuário clica dentro dele.
+
+button:hover
+-> Seleciona o botão SOMENTE quando o mouse está sobre ele.
+
+
+
+CORES E FUNDO
+------------------------------------------------------------
+
+background-color: #f1f5f9;
+-> Define a cor de fundo.
+-> #f1f5f9 é uma cor em hexadecimal.
+-> Não possui unidade.
+
+background-color: white;
+-> Define a cor de fundo como branco.
+-> "white" é um nome de cor reconhecido pelo CSS.
+-> Não possui unidade.
+
+color: #1e293b;
+-> Define a cor do TEXTO.
+-> Valor hexadecimal.
+-> Não possui unidade.
+
+color: white;
+-> Define a cor do texto como branco.
+
+border-color: #2563eb;
+-> Altera somente a cor da borda.
+
+
+
+FONTES
+------------------------------------------------------------
+
+font-family: Arial, Helvetica, sans-serif;
+-> Define a fonte utilizada no texto.
+-> O navegador tenta Arial primeiro.
+-> Se não existir, tenta Helvetica.
+-> Se também não existir, utiliza alguma fonte sem serifa.
+-> Não utiliza px.
+
+font-size: 16px;
+-> Define o tamanho da fonte.
+-> 16px significa 16 pixels.
+
+font-weight: bold;
+-> Define a espessura/peso da fonte.
+-> bold = negrito.
+-> Não utiliza px.
+
+
+
+TAMANHO
+------------------------------------------------------------
+
+width: 400px;
+-> Define a largura do elemento.
+-> 400px = 400 pixels.
+
+width: 100%;
+-> Define a largura como 100% do espaço disponível.
+-> % significa porcentagem.
+
+min-height: 100vh;
+-> Define a ALTURA MÍNIMA.
+-> 100vh significa 100% da altura visível da tela.
+-> vh = Viewport Height.
+
+height: 100px;
+-> Se fosse utilizado, definiria uma altura de 100 pixels.
+
+min-height
+-> Define uma altura mínima.
+-> O elemento pode ficar maior caso seja necessário.
+
+width
+-> Define a largura.
+
+
+
+ESPAÇAMENTOS
+------------------------------------------------------------
+
+margin: 0;
+-> Remove o espaço EXTERNO do elemento.
+-> 0 não precisa de unidade.
+
+margin-bottom: 30px;
+-> Coloca 30 pixels de espaço EXTERNO abaixo do elemento.
+
+margin-bottom: 20px;
+-> Coloca 20 pixels de espaço externo abaixo.
+
+margin-bottom: 5px;
+-> Coloca 5 pixels de espaço externo abaixo.
+
+padding: 30px;
+-> Cria 30 pixels de espaço INTERNO em todos os lados.
+
+padding: 12px;
+-> Cria 12 pixels de espaço interno.
+
+padding
+-> Espaço DENTRO do elemento.
+
+margin
+-> Espaço FORA do elemento.
+
+
+BOX MODEL
+------------------------------------------------------------
+
+O CSS normalmente trabalha pensando assim:
+
+MARGIN
+    BORDER
+        PADDING
+            CONTEÚDO
+
+margin
+-> espaço fora.
+
+border
+-> borda.
+
+padding
+-> espaço entre a borda e o conteúdo.
+
+conteúdo
+-> texto, input, imagem etc.
+
+
+
+BORDAS
+------------------------------------------------------------
+
+border: 1px solid #dddddd;
+-> Cria uma borda.
+
+1px
+-> Espessura da borda: 1 pixel.
+
+solid
+-> Tipo da borda: linha contínua.
+
+#dddddd
+-> Cor da borda.
+
+
+border: 1px solid #cbd5e1;
+-> Mesma lógica:
+-> 1px de espessura.
+-> solid = linha contínua.
+-> #cbd5e1 = cor.
+
+
+border: none;
+-> Remove a borda.
+-> Não possui unidade.
+
+
+border-radius: 15px;
+-> Arredonda os cantos.
+-> Quanto maior o valor, mais arredondado.
+
+border-radius: 8px;
+-> Arredondamento de 8 pixels.
+
+
+
+SOMBRA
+------------------------------------------------------------
+
+box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+-> Adiciona uma sombra ao elemento.
+
+0px
+-> Deslocamento horizontal.
+-> 0 significa que ela não vai para esquerda/direita.
+
+5px
+-> Deslocamento vertical.
+-> A sombra fica 5 pixels para baixo.
+
+20px
+-> Desfoque da sombra.
+-> Quanto maior, mais espalhada/suave ela fica.
+
+rgba(0, 0, 0, 0.15)
+-> Define a cor da sombra.
+
+0
+-> quantidade de vermelho.
+
+0
+-> quantidade de verde.
+
+0
+-> quantidade de azul.
+
+0.15
+-> transparência/opacidade.
+-> Vai de 0 até 1.
+-> 0 = totalmente transparente.
+-> 1 = totalmente visível.
+
+
+
+CENTRALIZAÇÃO / FLEXBOX
+------------------------------------------------------------
+
+display: flex;
+-> Ativa o Flexbox naquele elemento.
+-> Permite organizar e alinhar seus elementos filhos.
+-> Não possui unidade.
+
+justify-content: center;
+-> Centraliza os elementos no eixo principal do Flexbox.
+-> Neste caso, horizontalmente.
+-> Não possui unidade.
+
+align-items: center;
+-> Centraliza os elementos no outro eixo.
+-> Neste caso, verticalmente.
+-> Não possui unidade.
+
+center
+-> É um valor/palavra-chave do CSS.
+-> Não é uma medida, então não utiliza px.
+
+
+
+TEXTO
+------------------------------------------------------------
+
+text-align: center;
+-> Centraliza o texto horizontalmente.
+-> Não possui unidade.
+
+text-align: left;
+-> Alinharia o texto à esquerda.
+
+text-align: right;
+-> Alinharia o texto à direita.
+
+
+
+INPUT
+------------------------------------------------------------
+
+box-sizing: border-box;
+-> Faz padding e border serem considerados DENTRO da largura definida.
+
+Exemplo:
+
+width: 100%;
+padding: 12px;
+
+Sem border-box:
+-> O padding pode fazer o input ultrapassar o tamanho esperado.
+
+Com border-box:
+-> O navegador mantém tudo dentro dos 100%.
+
+outline: none;
+-> Remove o contorno padrão que o navegador coloca no elemento em foco.
+-> Não possui unidade.
+
+
+
+MOUSE
+------------------------------------------------------------
+
+cursor: pointer;
+-> Faz o cursor virar a "mãozinha".
+-> Normalmente utilizado em elementos clicáveis.
+-> Não possui unidade.
+
+
+
+ESTADOS
+------------------------------------------------------------
+
+:hover
+-> Estado utilizado quando o mouse está SOBRE um elemento.
+
+Exemplo:
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+-> Quando o mouse estiver sobre o botão, muda sua cor.
+
+
+:focus
+-> Estado utilizado quando um elemento está selecionado/em foco.
+
+Exemplo:
+
+input:focus {
+    border-color: #2563eb;
+}
+
+-> Quando clicar no input, sua borda muda de cor.
+
+
+
+UNIDADES
+------------------------------------------------------------
+
+px
+-> Pixel.
+-> Medida fixa.
+
+Exemplo:
+width: 400px;
+
+
+%
+-> Porcentagem.
+-> Normalmente depende do tamanho do elemento pai/espaço disponível.
+
+Exemplo:
+width: 100%;
+
+
+vh
+-> Viewport Height.
+-> Relacionado à ALTURA da tela.
+
+100vh
+-> 100% da altura da tela.
+
+50vh
+-> 50% da altura da tela.
+
+
+vw
+-> Viewport Width.
+-> Relacionado à LARGURA da tela.
+
+100vw
+-> 100% da largura da tela.
+
+
+VALORES SEM UNIDADE
+------------------------------------------------------------
+
+white
+-> nome de uma cor.
+
+#2563eb
+-> cor hexadecimal.
+
+bold
+-> peso da fonte.
+
+center
+-> centralização.
+
+flex
+-> modo de exibição.
+
+solid
+-> tipo de borda.
+
+none
+-> ausência/desativação de determinada propriedade.
+
+pointer
+-> tipo de cursor.
+
+border-box
+-> forma de calcular o tamanho do elemento.
