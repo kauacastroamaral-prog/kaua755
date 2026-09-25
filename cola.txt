@@ -396,3 +396,7 @@ pointer
 
 border-box
 -> forma de calcular o tamanho do elemento.
+
+
+https://www.w3schools.com/cssref/
+DIA DE PROVA USAR!!!!!!!
