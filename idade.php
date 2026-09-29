@@ -18,7 +18,7 @@ $resultado ="";
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
+<link rel="stylesheet" href="verificador.css">
 <body>
 <header>
     <nav>
