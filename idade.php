@@ -28,7 +28,7 @@ $resultado ="";
 </header>
 </body>
 <main>
-    <section class="CADASTRO"> 
+    
         <h1>cadastro</h1>
      <form method="POST"> 
 <label>Nome:</label>
@@ -41,7 +41,7 @@ $resultado ="";
 
      </form>
      <h2> <?= $resultado?> </h2>
-    </section>
+    
 </main>
 </body>
 </head>
