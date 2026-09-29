@@ -2,7 +2,7 @@
 <?php
 $nome = $_POST["nome"];
 $idade =  $_POST["idade"];
-
+$resultado ="";
 
 
     if  ($idade >= 18) {
@@ -40,6 +40,7 @@ $idade =  $_POST["idade"];
 
 
      </form>
+     <h2> <?= $resultado?> </h2>
     </section>
 </main>
 </body>

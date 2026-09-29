@@ -11,7 +11,7 @@
     <!--   MENU   -->
     <header>
         <div class="logo">
-            <!--<h2> </h2>-->
+            
             <h2>Kauã <span>Castro</span></h2>
         </div>
 
@@ -93,7 +93,7 @@
                             <span>CSS</span>
                             <!-- span>PHP</span -->
                         </div>
-                        <a href="cadastro.html">Ver projeto</a>
+                        <a href="idade.php">Ver projeto</a>
                     </div>
                     <!--  PROJETO 2  -->
                     <div class="card">
@@ -107,7 +107,7 @@
                             <span>CSS</span>
                             <!-- span>PHP</span -->
                         </div>
-                        <a href="cadastro.html">Ver projeto</a>
+                        <a href="idade.php">Ver projeto</a>
                     </div>
 
                     <!--   PROJETO 3  -->
@@ -122,7 +122,7 @@
                             <span>CSS</span>
                             <!-- span>PHP</span -->
                         </div>
-                        <a href="cadastro.html">Ver projeto</a>
+                        <a href="idade.php">Ver projeto</a>
                     </div>
                 </div>
             </section>
