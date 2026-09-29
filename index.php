@@ -1,17 +1,4 @@
-<?php
-$nome = "Kauã";
-$idade = 18;
-$altura = 1.70;
-$matricula_ativa = true;
-$resultado = "";
 
-if  ($idade >= 18) {
-   $resultado ="É de maior";
-}  else{
-    $resultado = " É de menor";
-}
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -24,8 +11,8 @@ if  ($idade >= 18) {
     <!--   MENU   -->
     <header>
         <div class="logo">
-            <h2> <?= $resultado?> </h2>
-            <!--<h2>Kauã <span>Castro</span></h2>-->
+            <!--<h2> </h2>-->
+            <h2>Kauã <span>Castro</span></h2>
         </div>
 
         <nav>
