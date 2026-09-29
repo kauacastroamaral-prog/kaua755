@@ -105,7 +105,7 @@
                         <div class="tecnologias">
                             <span>HTML</span>
                             <span>CSS</span>
-                            <!-- span>PHP</span -->
+                            <span>PHP</span>
                         </div>
                         <a href="idade.php">Ver projeto</a>
                     </div>
