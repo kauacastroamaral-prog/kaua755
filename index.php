@@ -98,10 +98,10 @@
                     <!--  PROJETO 2  -->
                     <div class="card">
                         <div class="numero-projeto">
-                            01
+                            02
                         </div>
-                        <h3>Sistema de cadastro</h3>
-                        <p>Descrição do sistema de cadastro</p>
+                        <h3>Sistema de idade</h3>
+                        <p>Descrição do sistema de idade</p>
                         <div class="tecnologias">
                             <span>HTML</span>
                             <span>CSS</span>
