@@ -97,7 +97,7 @@
                         <span>HTML</span>
                         <span>CSS</span>
                     </div>
-                    <a href="idade-post.php">Ver projetos</a>
+                    <a href="idade-POST.php">Ver projetos</a>
                 </div>
 
                 <!-- PROJETO 2-->
@@ -118,11 +118,11 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="idade-get.php">Ver projetos</a>
+                    <a href="idade-GET.php">Ver projetos</a>
                 </div>
 
 
-                    <!--   PROJETO 3  -->
+                    <!--   PROJETO 3  >
                     <div class="card">
                         <div class="numero-projeto">
                             03
@@ -132,12 +132,12 @@
                         <div class="tecnologias">
                             <span>HTML</span>
                             <span>CSS</span>
-                            <!-- span>PHP</span -->
-                        </div>
+                            < span>PHP</span -->
+                        <!--/div>
                         <a href="idade.php">Ver projeto</a>
                     </div>
                 </div>
-            </section>
+            </section-->
 
             <section id="contato" class="contato">
                 <div class="titulo-secao">
