@@ -1,22 +1,5 @@
-?php
-// Lógica de verificação em PHP
-$mensagem = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : '';
-$idade = isset($_POST['idade']) ? intval($_POST['idade']) : 0;
 
-if ($idade > 0) {
-if ($idade >= 18) {
-$mensagem = "É de maior";
-} else {
-$mensagem = "É de menor";
-}
-} else {
-$mensagem = "Por favor, insira uma idade válida.";
-}
-}
-?>
-<!DOCTYPE html>
+<!--DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -152,14 +135,15 @@ color: #1f2937;
 </head>
 <body>
 
-<!-- Link Início fixo no canto superior esquerdo -->
-<a href="index.php" class="btn-inicio">← Início</a>
+< Link Início fixo no canto superior esquerdo -->
+<!--a href="index.php" class="btn-inicio">← Início</a>
 
-<!-- Card de Cadastro Centralizado -->
-<div class="card-container">
+< Card de Cadastro Centralizado -->
+<!--div class="card-container">
 <h1>cadastro</h1>
 
-<form action="idade.php" method="POST">
+<form action="idade-POST.php" method="POST">
+    <form action="idade-GET.php" method="GET">
 <div class="form-group">
 <label for="nome">Nome</label>
 <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
@@ -173,12 +157,53 @@ color: #1f2937;
 <button type="submit" class="btn-submit">Cadastrar</button>
 </form>
 
-<?php if (!empty($mensagem)): ?>
-<div class="resultado">
-<?php echo $mensagem; ?>
+<o?php if (!empty($mensagem)): ?>
+<odiv class="resultado">
+<o?php echo $mensagem; ?>
 </div>
-<?php endif; ?>
+<o?php endif; ?>
 </div>
 
 </body>
-</html>
+</html-->
+
+<?php 
+    $nome = $_POST["nome"];
+    $idade = $_POST["idade"];
+    $resultado = "";
+
+    if($idade >= 18) {
+        $resultado = "Você é maior de idade";
+    } else { 
+        $resultado = "Você é menor de idade";
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="verificador.css">
+</head>
+<body>
+    <!--MENU-->
+    <div class="logo">
+        <h2>Verificação de idade</h2>
+    <nav>
+        <a href="index.php">Início</a>
+    </nav>
+    </div>
+
+    <div class="mensagem">
+    <form method="POST">
+        <label>Nome:</label>
+        <input type="text" class="nome" id="nome" name="nome">
+        <input type="numero" class="idade" id="idade" name="idade">
+
+        <button type="submit">Enviar</button>
+    </div>
+    </form>
+    <h2> <?= $resultado ?> </h2>
+</body>

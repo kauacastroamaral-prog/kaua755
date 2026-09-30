@@ -77,38 +77,50 @@
             </section>
 
             <section id="projetos" class="projetos-secao">
-                <div class="titulo-secao">
-                    <p>Alguns trabalhos</p>
-                    <h2>Meus projetos</h2>
-                </div>
                 <div class="projetos">
-                    <div class="card">
-                        <div class="numero-projeto">
-                            01
-                        </div>
-                        <h3>Sistema de cadastro</h3>
-                        <p>Descrição do sistema de cadastro</p>
-                        <div class="tecnologias">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <!-- span>PHP</span -->
-                        </div>
-                        <a href="idade.php">Ver projeto</a>
+
+                <!-- PROJETO 1 -->
+
+                <div class="card">
+
+                    <div class="numero-projeto">
+                        01
                     </div>
-                    <!--  PROJETO 2  -->
-                    <div class="card">
-                        <div class="numero-projeto">
-                            02
-                        </div>
-                        <h3>Sistema de idade</h3>
-                        <p>Descrição do sistema de idade</p>
-                        <div class="tecnologias">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>PHP</span>
-                        </div>
-                        <a href="idade.php">Ver projeto</a>
+
+                    <h3>Sistema de verificação de idade - POST</h3>
+                    <p>
+                        Recebe idade e informa se é maior ou menor de idade em POST
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>PHP</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
                     </div>
+                    <a href="idade-post.php">Ver projetos</a>
+                </div>
+
+                <!-- PROJETO 2-->
+
+                <div class="card">
+
+                    <div class="numero-projeto">
+                        02
+                    </div>
+
+                    <h3>Sistema de verificação de idade - GET</h3>
+                    <p>
+                        Recebe idade e informa se é maior ou menor de idade em GET
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="idade-get.php">Ver projetos</a>
+                </div>
+
 
                     <!--   PROJETO 3  -->
                     <div class="card">
