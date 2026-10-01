@@ -167,43 +167,75 @@ color: #1f2937;
 </body>
 </html-->
 
-<?php 
-    $nome = $_POST["nome"];
-    $idade = $_POST["idade"];
-    $resultado = "";
-
-    if($idade >= 18) {
-        $resultado = "Você é maior de idade";
-    } else { 
-        $resultado = "Você é menor de idade";
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de idade</title>
-    <link rel="stylesheet" href="verificador.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificador de Idade</title>
+
+<link rel="stylesheet" href="verificador.css">
 </head>
+
 <body>
-    <!--MENU-->
-    <div class="logo">
-        <h2>Verificação de idade</h2>
-    <nav>
-        <a href="index.php">Início</a>
-    </nav>
-    </div>
 
-    <div class="mensagem">
-    <form method="POST">
-        <label>Nome:</label>
-        <input type="text" class="nome" id="nome" name="nome">
-        <input type="numero" class="idade" id="idade" name="idade">
+<!-- MENU -->
+<header>
+<h2>Verificação de idade</h2>
 
-        <button type="submit">Enviar</button>
-    </div>
-    </form>
-    <h2> <?= $resultado ?> </h2>
+<a href="index.php">← Início</a>
+</header>
+
+
+<!-- FORMULÁRIO -->
+<main>
+
+<div class="caixa">
+
+<h1>Verificador de Idade</h1>
+
+<p>Digite seus dados abaixo:</p>
+
+<form method="POST">
+
+<label for="nome">Nome</label>
+<input
+type="text"
+id="nome"
+name="nome"
+placeholder="Digite seu nome"
+required
+>
+
+<label for="idade">Idade</label>
+<input
+type="number"
+id="idade"
+name="idade"
+placeholder="Digite sua idade"
+required
+>
+
+<button type="submit">Verificar idade</button>
+
+</form>
+
+
+<!-- RESULTADO -->
+<?php if ($resultado != "") { ?>
+
+<div class="resultado">
+<h2>
+<?php echo $resultado; ?>
+</h2>
+</div>
+
+<?php } ?>
+
+</div>
+
+</main>
+
 </body>
+</html>
