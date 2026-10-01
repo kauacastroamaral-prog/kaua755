@@ -1,4 +1,21 @@
+?php
+// Lógica de verificação em PHP
+$mensagem = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : '';
+$idade = isset($_POST['idade']) ? intval($_POST['idade']) : 0;
 
+if ($idade > 0) {
+if ($idade >= 18) {
+$mensagem = "É de maior";
+} else {
+$mensagem = "É de menor";
+}
+} else {
+$mensagem = "Por favor, insira uma idade válida.";
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -135,15 +152,14 @@ color: #1f2937;
 </head>
 <body>
 
-< Link Início fixo no canto superior esquerdo -->
+<!-- Link Início fixo no canto superior esquerdo -->
 <a href="index.php" class="btn-inicio">← Início</a>
 
-< Card de Cadastro Centralizado -->
+<!-- Card de Cadastro Centralizado -->
 <div class="card-container">
 <h1>cadastro</h1>
 
-<form action="idade-POST.php" method="POST">
-    <form action="idade-GET.php" method="GET">
+<form action="idade.php" method="POST">
 <div class="form-group">
 <label for="nome">Nome</label>
 <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
@@ -157,13 +173,12 @@ color: #1f2937;
 <button type="submit" class="btn-submit">Cadastrar</button>
 </form>
 
-<o?php if (!empty($mensagem)): ?>
-<odiv class="resultado">
-<o?php echo $mensagem; ?>
+<?php if (!empty($mensagem)): ?>
+<div class="resultado">
+<?php echo $mensagem; ?>
 </div>
-<o?php endif; ?>
+<?php endif; ?>
 </div>
 
 </body>
 </html>
-
