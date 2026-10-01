@@ -1,5 +1,5 @@
 
-<!--DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -136,10 +136,10 @@ color: #1f2937;
 <body>
 
 < Link Início fixo no canto superior esquerdo -->
-<!--a href="index.php" class="btn-inicio">← Início</a>
+<a href="index.php" class="btn-inicio">← Início</a>
 
 < Card de Cadastro Centralizado -->
-<!--div class="card-container">
+<div class="card-container">
 <h1>cadastro</h1>
 
 <form action="idade-POST.php" method="POST">
@@ -165,77 +165,5 @@ color: #1f2937;
 </div>
 
 </body>
-</html-->
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verificador de Idade</title>
-
-<link rel="stylesheet" href="verificador.css">
-</head>
-
-<body>
-
-<!-- MENU -->
-<header>
-<h2>Verificação de idade</h2>
-
-<a href="index.php">← Início</a>
-</header>
-
-
-<!-- FORMULÁRIO -->
-<main>
-
-<div class="caixa">
-
-<h1>Verificador de Idade</h1>
-
-<p>Digite seus dados abaixo:</p>
-
-<form method="POST">
-
-<label for="nome">Nome</label>
-<input
-type="text"
-id="nome"
-name="nome"
-placeholder="Digite seu nome"
-required
->
-
-<label for="idade">Idade</label>
-<input
-type="number"
-id="idade"
-name="idade"
-placeholder="Digite sua idade"
-required
->
-
-<button type="submit">Verificar idade</button>
-
-</form>
-
-
-<!-- RESULTADO -->
-<?php if ($resultado != "") { ?>
-
-<div class="resultado">
-<h2>
-<?php echo $resultado; ?>
-</h2>
-</div>
-
-<?php } ?>
-
-</div>
-
-</main>
-
-</body>
 </html>
+
