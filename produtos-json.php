@@ -88,16 +88,16 @@ $produto = json_decode($conteudoJson, true);
         <input type="text" name="nome" required>
         <br><br>
         <label>País:</label>
-        <input type="text" name="país" min="0" max="10" step="0.1" required>
+        <input type="text" name="país" required>
         <br><br>
         <label>Nome do fabricante</label>
         <input type="text" name="fabricante"  required>
         <br><br>
         <label>Quantidade:</label>
-        <input type="number" name="quantidade" min="0" max="50000" step="0.1" required>
+        <input type="number" name="quantidade" min="0" max="50000"  required>
         <br><br>
         <label>Preço:</label>
-        <input type="number" name="preço" min="0" max="500" step="0.1" required>
+        <input type="number" name="preço" min="0" max="500"  required>
         <br><br>
         <label>Marca:</label>
         <input type="text" name="marca"  required>
@@ -110,19 +110,37 @@ $produto = json_decode($conteudoJson, true);
     <h1>PRODUTO CADASTRADOS</h1>
 
     <?php foreach ($produto as $novo_produto) { ?>
-        <h2> <?= $nome_produto["nome"]  ?> </h2>
-        <p>  fabricante: <?= $fabriacante["fabriccante"] ?></p>
 
-                                                        <!-- PRODUTO -->
+    <h2><?= $novo_produto["nome"] ?></h2>
 
-        <h2>PRODUTOS</h2>
-        <p>QUANTIDADE: <?= $quantidade["Estoque"]["produtos"]["quantidade"] ?></p>
-        <p>PREÇO: <?= $preço["Estoque"]["produtos"]["preço"] ?></p>
-        <p>MARCA : <?= $marca["Estoque"]["produtos"]["marca"] ?></p>
-        <p>CATEGORIA : <?= $categoria["Estoque"]["produtos"]["categoria"] ?></p>
+    <p>Fabricante: <?= $novo_produto["fabricante"] ?></p>
 
+    <p>País: <?= $novo_produto["país"] ?></p>
 
-    <?php } ?>
+    <h3>PRODUTO</h3>
+
+    <p>
+        QUANTIDADE:
+        <?= $novo_produto["Estoque"]["produtos"]["quantidade"] ?>
+    </p>
+
+    <p>
+        PREÇO:
+        <?= $novo_produto["Estoque"]["produtos"]["preço"] ?>
+    </p>
+
+    <p>
+        MARCA:
+        <?= $novo_produto["Estoque"]["produtos"]["marca"] ?>
+    </p>
+
+    <p>
+        CATEGORIA:
+        <?= $novo_produto["Estoque"]["produtos"]["categoria"] ?>
+    </p>
+
+<?php } ?>
+
 
 
 
