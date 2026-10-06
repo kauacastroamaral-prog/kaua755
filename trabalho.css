@@ -10,7 +10,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #a80404, #af4545);
+    background: linear-gradient(135deg, #a80404, #330202);
     min-height: 100vh;
     padding: 50px 20px;
     color: #555555;
@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-    color: #9c9898;
+    color: #383737;
     margin-bottom: 15px;
 }
 
@@ -58,7 +58,7 @@ label {
     display: block;
     margin-bottom: 7px;
     font-weight: bold;
-    color: #2c2c2c;
+    color: #1d1a1a;
 }
 
 
@@ -128,7 +128,7 @@ button:hover {
 
     padding: 25px;
 
-    background: rgb(107, 104, 104);
+    background: rgb(31, 30, 30);
 
     border-radius: 20px;
 
