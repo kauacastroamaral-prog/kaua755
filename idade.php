@@ -47,184 +47,426 @@ $resultado ="";
 <?php
 // Lógica de verificação em PHP
 $mensagem = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : '';
-$idade = isset($_POST['idade']) ? intval($_POST['idade']) : 0;
 
-if ($idade > 0) {
-if ($idade >= 18) {
-$mensagem = "É de maior";
-} else {
-$mensagem = "É de menor";
-}
-} else {
-$mensagem = "Por favor, insira uma idade válida.";
-}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $nome = isset($_POST['nome']) ? htmlspecialchars($_POST['nome']) : '';
+    $idade = isset($_POST['idade']) ? intval($_POST['idade']) : 0;
+
+    if ($idade > 0) {
+
+        if ($idade >= 18) {
+            $mensagem = "É de maior";
+        } else {
+            $mensagem = "É de menor";
+        }
+
+    } else {
+        $mensagem = "Por favor, insira uma idade válida.";
+    }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadastro - Verificador de Idade</title>
-<style>
-/* Reset de margens e padding */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
 
-html {
-scroll-behavior: smooth;
-}
+    <meta charset="UTF-8">
 
-/* Estilização do Body com Flexbox para centralizar tudo */
-body {
-font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-background-color: #e7e7ec;
-color: #0e0606;
-line-height: 1.6;
-min-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Botão INÍCIO descolado no topo da página */
-.btn-inicio {
-position: absolute;
-top: 24px;
-left: 24px;
-text-decoration: none;
-color: #4f46e5;
-font-weight: 700;
-font-size: 0.9rem;
-text-transform: uppercase;
-letter-spacing: 0.5px;
-padding: 8px 16px;
-background-color: #ffffff;
-border-radius: 8px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-transition: all 0.2s ease;
-}
+    <title>Cadastro - Verificador de Idade</title>
 
-.btn-inicio:hover {
-background-color: #4f46e5;
-color: #ffffff;
-}
+    <style>
 
-/* Card centralizado */
-.card-container {
-background-color: #ffffff;
-padding: 2.5rem;
-border-radius: 12px;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-width: 100%;
-max-width: 380px;
-}
+        /* =========================
+           RESET
+        ========================= */
 
-.card-container h1 {
-font-size: 1.8rem;
-margin-bottom: 1.5rem;
-color: #111827;
-text-align: center;
-text-transform: lowercase;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Campos do Formulário */
-.form-group {
-display: flex;
-flex-direction: column;
-margin-bottom: 1.2rem;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.form-group label {
-font-weight: 600;
-margin-bottom: 0.4rem;
-font-size: 0.85rem;
-color: #374151;
-text-transform: uppercase;
-}
 
-.form-group input {
-width: 100%;
-padding: 0.75rem;
-border: 1px solid #d1d5db;
-border-radius: 8px;
-font-size: 1rem;
-outline: none;
-transition: border-color 0.2s, box-shadow 0.2s;
-}
+        /* =========================
+           BODY
+        ========================= */
 
-.form-group input:focus {
-border-color: #4f46e5;
-box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
-}
+        body {
 
-/* Botão de Envio */
-.btn-submit {
-width: 100%;
-padding: 0.85rem;
-background-color: #4f46e5;
-color: #ffffff;
-border: none;
-border-radius: 8px;
-font-size: 1rem;
-font-weight: 600;
-cursor: pointer;
-transition: background-color 0.2s;
-margin-top: 0.5rem;
-}
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
 
-.btn-submit:hover {
-background-color: #4338ca;
-}
+            background: linear-gradient(
+                135deg,
+                #080808,
+                #151515,
+                #250000
+            );
 
-/* Resultado da Verificação */
-.resultado {
-margin-top: 1.5rem;
-padding: 0.8rem;
-border-radius: 8px;
-background-color: #f3f4f6;
-text-align: center;
-font-size: 1.1rem;
-font-weight: 700;
-color: #1f2937;
-}
-</style>
+            color: #ffffff;
+
+            line-height: 1.6;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+
+            padding: 20px;
+        }
+
+
+        /* =========================
+           BOTÃO INÍCIO
+        ========================= */
+
+        .btn-inicio {
+
+            position: fixed;
+
+            top: 25px;
+            left: 25px;
+
+            text-decoration: none;
+
+            color: #ffffff;
+
+            font-weight: 700;
+
+            font-size: 0.9rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            padding: 10px 18px;
+
+            background-color: #111111;
+
+            border: 1px solid #ff1e1e;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+            transition: 0.3s;
+        }
+
+        .btn-inicio:hover {
+
+            background-color: #e50909;
+
+            border-color: #ff3333;
+
+            color: #ffffff;
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card-container {
+
+            background: #111111;
+
+            padding: 2.5rem;
+
+            border-radius: 15px;
+
+            border: 1px solid #2b2b2b;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.7),
+                0 0 25px rgba(180, 0, 0, 0.08);
+
+            width: 100%;
+
+            max-width: 380px;
+        }
+
+
+        /* =========================
+           TÍTULO
+        ========================= */
+
+        .card-container h1 {
+
+            font-size: 1.8rem;
+
+            margin-bottom: 1.5rem;
+
+            color: #ffffff;
+
+            text-align: center;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .card-container h1::after {
+
+            content: "";
+
+            display: block;
+
+            width: 60px;
+
+            height: 3px;
+
+            background: #e50909;
+
+            margin: 8px auto 0;
+
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           CAMPOS
+        ========================= */
+
+        .form-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+            margin-bottom: 1.2rem;
+        }
+
+
+        .form-group label {
+
+            font-weight: 600;
+
+            margin-bottom: 0.4rem;
+
+            font-size: 0.85rem;
+
+            color: #dddddd;
+
+            text-transform: uppercase;
+        }
+
+
+        .form-group input {
+
+            width: 100%;
+
+            padding: 0.75rem;
+
+            background-color: #1c1c1c;
+
+            color: #ffffff;
+
+            border: 1px solid #3a3a3a;
+
+            border-radius: 8px;
+
+            font-size: 1rem;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+
+        .form-group input::placeholder {
+
+            color: #777777;
+        }
+
+
+        .form-group input:focus {
+
+            border-color: #e50909;
+
+            box-shadow: 0 0 0 3px rgba(229, 9, 9, 0.15);
+
+            background-color: #202020;
+        }
+
+
+        /* =========================
+           BOTÃO CADASTRAR
+        ========================= */
+
+        .btn-submit {
+
+            width: 100%;
+
+            padding: 0.85rem;
+
+            background: #e50909;
+
+            color: #ffffff;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            margin-top: 0.5rem;
+        }
+
+
+        .btn-submit:hover {
+
+            background: #ff1f1f;
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 6px 15px rgba(229, 9, 9, 0.35);
+        }
+
+
+        /* =========================
+           RESULTADO
+        ========================= */
+
+        .resultado {
+
+            margin-top: 1.5rem;
+
+            padding: 0.9rem;
+
+            border-radius: 8px;
+
+            background-color: #1c1c1c;
+
+            border-left: 4px solid #e50909;
+
+            text-align: center;
+
+            font-size: 1.1rem;
+
+            font-weight: 700;
+
+            color: #ffffff;
+        }
+
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .card-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .btn-inicio {
+                top: 15px;
+                left: 15px;
+            }
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-<!-- Link Início fixo no canto superior esquerdo -->
-<a href="index.php" class="btn-inicio">← Início</a>
+    <!-- Botão para voltar ao início -->
+    <a href="./index.php" class="btn-inicio">
+        ← Início
+    </a>
 
-<!-- Card de Cadastro Centralizado -->
-<div class="card-container">
-<h1>cadastro</h1>
 
-<form action="idade.php" method="POST">
-<div class="form-group">
-<label for="nome">Nome</label>
-<input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-</div>
+    <!-- Card de cadastro -->
 
-<div class="form-group">
-<label for="idade">Idade</label>
-<input type="number" id="idade" name="idade" placeholder="Digite sua idade" required>
-</div>
+    <div class="card-container">
 
-<button type="submit" class="btn-submit">Cadastrar</button>
-</form>
+        <h1>Cadastro</h1>
 
-<?php if (!empty($mensagem)): ?>
-<div class="resultado">
-<?php echo $mensagem; ?>
-</div>
-<?php endif; ?>
-</div>
+
+        <form action="idade.php" method="POST">
+
+            <div class="form-group">
+
+                <label for="nome">
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="idade">
+                    Idade
+                </label>
+
+                <input
+                    type="number"
+                    id="idade"
+                    name="idade"
+                    placeholder="Digite sua idade"
+                    min="1"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit" class="btn-submit">
+                Cadastrar
+            </button>
+
+        </form>
+
+
+        <?php if (!empty($mensagem)): ?>
+
+            <div class="resultado">
+
+                <?php echo $mensagem; ?>
+
+            </div>
+
+        <?php endif; ?>
+
+    </div>
 
 </body>
+
 </html>
