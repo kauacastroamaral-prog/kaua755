@@ -115,7 +115,7 @@ $produto = json_decode($conteudoJson, true);
                                                         <!-- PRODUTO -->
 
         <h2>PRODUTOS</h2>
-        <p>QUANTIDADE: <?= $quantidade["Estoques"]["produtos"]["quantidade"] ?></p>
+        <p>QUANTIDADE: <?= $quantidade["Estoque"]["produtos"]["quantidade"] ?></p>
         <p>PREÇO: <?= $preço["Estoque"]["produtos"]["preço"] ?></p>
         <p>MARCA : <?= $marca["Estoque"]["produtos"]["marca"] ?></p>
         <p>CATEGORIA : <?= $categoria["Estoque"]["produtos"]["categoria"] ?></p>
