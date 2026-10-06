@@ -94,10 +94,10 @@ $produto = json_decode($conteudoJson, true);
         <input type="text" name="fabricante"  required>
         <br><br>
         <label>Quantidade:</label>
-        <input type="number" name="quantidade" min="0" max="500"  required>
+        <input type="number" name="quantidade" min="10" max="500"  required>
         <br><br>
         <label>Preço:</label>
-        <input type="number" name="preço" min="0" max="500"  required>
+        <input type="number" name="preço" min="15" max="500"  required>
         <br><br>
         <label>Marca:</label>
         <input type="text" name="marca"  required>
