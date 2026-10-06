@@ -13,7 +13,7 @@ body {
     background: linear-gradient(135deg, #111113, #f50303);
     min-height: 100vh;
     padding: 50px 20px;
-    color: #f0eaea;
+    color: #555555;
 }
 
 
@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-    color: #0a0101;
+    color: #9c9898;
     margin-bottom: 15px;
 }
 
@@ -100,7 +100,7 @@ button {
 
     background: linear-gradient(135deg, #3f4042, #0c0613);
 
-    color: white;
+    color: rgb(243, 3, 3);
     font-size: 16px;
     font-weight: bold;
 
@@ -128,7 +128,7 @@ button:hover {
 
     padding: 25px;
 
-    background: white;
+    background: rgb(107, 104, 104);
 
     border-radius: 20px;
 
