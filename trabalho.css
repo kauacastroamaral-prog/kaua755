@@ -1,1 +1,16 @@
- 
+ body
+ {
+    background-color: chocolate;
+    text-align: center;
+    font-family: Arial;
+ }
+
+ h1{
+color: crimson;
+margin-top: 50px;
+
+ }
+
+ p{
+    font-size: 18px;
+ }
