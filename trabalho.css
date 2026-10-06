@@ -85,6 +85,54 @@ input:focus {
 
     box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
 }
+   /* =========================
+           BOTÃO INÍCIO
+        ========================= */
+
+        .btn-inicio {
+
+            position: fixed;
+
+            top: 25px;
+            left: 25px;
+
+            text-decoration: none;
+
+            color: #ffffff;
+
+            font-weight: 700;
+
+            font-size: 0.9rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            padding: 10px 18px;
+
+            background-color: #111111;
+
+            border: 1px solid #ff1e1e;
+
+            border-radius: 8px;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+            transition: 0.3s;
+        }
+
+        .btn-inicio:hover {
+
+            background-color: #e50909;
+
+            border-color: #ff3333;
+
+            color: #ffffff;
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+        }
 
 
 /* =========================
