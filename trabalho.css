@@ -10,7 +10,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f4f5f7, #f50303);
+    background: linear-gradient(135deg, #48494b, #f50303);
     min-height: 100vh;
     padding: 50px 20px;
     color: #000000;
@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-    color: #5b5be7;
+    color: #e90303;
     margin-bottom: 15px;
 }
 
@@ -58,7 +58,7 @@ label {
     display: block;
     margin-bottom: 7px;
     font-weight: bold;
-    color: #444;
+    color: #2c2c2c;
 }
 
 
@@ -81,7 +81,7 @@ input {
 }
 
 input:focus {
-    border-color: #667eea;
+    border-color: #ec2323;
 
     box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
 }
@@ -98,7 +98,7 @@ button {
     border: none;
     border-radius: 10px;
 
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #3f4042, #0c0613);
 
     color: white;
     font-size: 16px;
