@@ -82,6 +82,11 @@ $produto = json_decode($conteudoJson, true);
     <link rel="stylesheet" href="trabalho.css">
 </head>
 <body>
+     <!-- Botão para voltar ao início -->
+    <a href="./index.php" class="btn-inicio">
+        ← Início
+    </a>
+    
     <h1>CADASTRO DE PRODUTO</h1>
     <form method="POST">
         <label>Nome:</label>
