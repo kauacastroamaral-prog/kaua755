@@ -13,7 +13,7 @@ body {
     background: linear-gradient(135deg, #111113, #f50303);
     min-height: 100vh;
     padding: 50px 20px;
-    color: #000000;
+    color: #f0eaea;
 }
 
 
@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-    color: #e90303;
+    color: #0a0101;
     margin-bottom: 15px;
 }
 
