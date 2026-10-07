@@ -400,3 +400,9 @@ border-box
 
 https://www.w3schools.com/cssref/
 DIA DE PROVA USAR!!!!!!!
+
+CRUD 
+C CREATE
+R READ
+U UPDATE
+D DELETE
