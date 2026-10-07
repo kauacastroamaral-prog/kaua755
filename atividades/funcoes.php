@@ -2,7 +2,7 @@
 
 $nomeEscola ="SENAI";
 //exibir mensagem
-function saldacao() {
+function saudacao() {
     return"Bem vindo ao sistema";
 
 }
