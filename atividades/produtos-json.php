@@ -88,7 +88,7 @@ $produto = json_decode($conteudoJson, true);
     </a>
     
     <h1>CADASTRO DE PRODUTO</h1>
-    <img src="praia.jpg" alt="Foto da praia de sp">
+   
     <form method="POST">
         <label>Nome:</label>
         <input type="text" name="nome" required>
