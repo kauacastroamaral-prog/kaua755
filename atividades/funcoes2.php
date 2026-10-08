@@ -1,7 +1,14 @@
 <?php
 
-require_once"funcoes.php";
+require_once "funcoes.php";
+if ($_SERVER[ "REQUEST_METHOD"]=="POST"){
+    $nota1 = $_POST["nota1"];
+    $nota2 = $_POST["nota2"];
 
+    $media = calcularmedia($nota1, $nota2);
+
+    $situacao = verificarstatus($media);
+}
 
 ?>
 <!DOCTYPE html>
@@ -12,9 +19,14 @@ require_once"funcoes.php";
     <title>funções no front</title>
 </head>
 <body>
-    <h1><?= $nomeEscola; ?></h1>
-    <h2><?= saudacao() ?></h2>
-    <P> <?= cumprimentar("Kaua") ?></P>
-    <p>resultado da soma: <?= somar(10,5) ?></p>
+    <form method="post">
+        <label >NOAT 1</label>
+        <input type="text" name="nota1" >
+        <label >NOAT 2</label>
+        <input type="text" name="nota2" >
+        <button type ="submit">Enviar</button>
+    </form>
+    <p><?= $situacao ?></p>
+
 </body>
 </html>

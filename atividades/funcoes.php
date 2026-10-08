@@ -19,5 +19,28 @@ return $resultado;
 
 }
 
+function calcularmedia($nota1, $nota2){
+
+$media = ($nota1 + $nota2) /2;
+return $media;
+}
+
+function verificarstatus($media){
+//media é 7
+
+if($media <= 7){
+    return "APROVADO, PARABENS!!";
+
+}
+else if ($media >= 5){
+    return"recuperação!!";
+
+}
+else{
+    return"REPROVADO";
+}
+}
+
+
 
 ?>
