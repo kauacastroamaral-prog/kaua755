@@ -20,9 +20,9 @@ if ($_SERVER[ "REQUEST_METHOD"]=="POST"){
 </head>
 <body>
     <form method="post">
-        <label >NOAT 1</label>
+        <label >NOTA 1</label>
         <input type="text" name="nota1" >
-        <label >NOAT 2</label>
+        <label >NOTA 2</label>
         <input type="text" name="nota2" >
         <button type ="submit">Enviar</button>
     </form>
