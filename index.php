@@ -97,7 +97,7 @@
                         <span>HTML</span>
                         <span>CSS</span>
                     </div>
-                    <a href="produtos-json.php">Ver projetos</a>
+                    <a href="atividades/produtos-json.php">Ver projetos</a>
                 </div>
 
                 <!-- PROJETO 2-->
@@ -118,7 +118,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="idade.php">Ver projetos</a>
+                    <a href="atividades/idade.php">Ver projetos</a>
                 </div>
 
 
@@ -134,7 +134,7 @@
                             <span>CSS</span>
                             < span>PHP</span -->
                         </div>
-                        <a href="funcoes2.php">Ver projeto</a>
+                        <a href="atividades/funcoes2.php">Ver projeto</a>
                     </div>
                 </div>
             </section>
