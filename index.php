@@ -134,7 +134,7 @@
                             <span>CSS</span>
                             < span>PHP</span -->
                         </div>
-                        <a href="funcoes2.hp">Ver projeto</a>
+                        <a href="funcoes2.php">Ver projeto</a>
                     </div>
                 </div>
             </section>
