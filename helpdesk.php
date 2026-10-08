@@ -57,9 +57,10 @@ function equipamento($tipo_equipamento)
 
         <select name="setor" required>
             <option value="">Selecione</option>
-            <option value="1">RH</option>
-            <option value="2">Financeiro</option>
-            <option value="3">TI</option>
+            <option value="1">Produção</option>
+            <option value="2">Administrativo</option>
+            <option value="3">Financeiro</option>
+            <option value="4">TI</option>
         </select>
 
         <br><br>
@@ -69,8 +70,9 @@ function equipamento($tipo_equipamento)
         <select name="equipamento" required>
             <option value="">Selecione</option>
             <option value="1">Computador</option>
-            <option value="2">Impressora</option>
-            <option value="3">Teclado</option>
+            <option value="2">Teclado</option>
+            <option value="3">Mouse</option>
+            <option value="4">Impressora</option>
         </select>
 
         <br><br>

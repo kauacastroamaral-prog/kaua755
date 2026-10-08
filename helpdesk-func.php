@@ -36,7 +36,7 @@ function cumprimentar($nome){
                             return "TI";
 
 
-                            case 6:
+                          default:
                             return "Setor Invalido";
      }
     
@@ -62,7 +62,7 @@ function cumprimentar($nome){
                         case 4:
                             return "Impressora";
 
-                            case 5:
+                            default:
                             return "Equipamento Invalido";
     }
 }
@@ -82,8 +82,8 @@ echo " 3 Mouse ! <br>";
 echo " 4 Impressora ! <br>";
 
 echo "Opção Escolhida: <br>";
-echo "Setor" . setor(3) . "<br>";
-echo "Equipamento" . equipamento(2);
+echo "Setor" . setor($setor_escolhido) . "<br>";
+echo "Equipamento" . equipamento($equipamento_escolhido);
 //REceber problema
 
 function problema ($problema){
