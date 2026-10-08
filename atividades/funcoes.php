@@ -35,7 +35,7 @@ if($media <= 7){
 else{
     return"REPROVADO";
 }
-
+}
 
 
 
