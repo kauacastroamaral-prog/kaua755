@@ -29,17 +29,13 @@ function verificarstatus($media){
 //media é 7
 
 if($media <= 7){
-    return "APROVADO, PARABENS!!";
-
-}
-else if ($media >= 5){
-    return"recuperação!!";
+    return"APROVADO!!";
 
 }
 else{
     return"REPROVADO";
 }
-}
+
 
 
 
