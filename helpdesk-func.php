@@ -93,8 +93,20 @@ function problema ($problema){
 
 //Prioridade do problema
 
-function prioridade($prioridade){
-   return "Analise de prioridade!" . $prioridade . "!";
+function prioridade($prioridade) {
+    switch ($prioridade) {
+        case 1:
+            return "Baixa";
+        case 2:
+            return "Média";
+        case 3:
+            return "Alta";
+        case 4:
+            return "Urgente";
+        default:
+            return "Prioridade inválida!";
+    }
+}
 }
 
 ?>

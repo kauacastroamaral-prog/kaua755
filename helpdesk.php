@@ -79,23 +79,16 @@ function equipamento($tipo_equipamento)
 
         <button type="submit">Registrar problema</button>
 
+         <label>Descrição do problema:</label>
+         <br>
+         <textarea name= "problema" required></textarea>
+         <br><br>
+
+
+
     </form>
 
-    <?php
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-        $setor_escolhido = (int) $_POST["setor"];
-        $equipamento_escolhido = (int) $_POST["equipamento"];
-
-        echo "<h2>Problema registrado!</h2>";
-
-        echo "Setor: " . setor($setor_escolhido) . "<br>";
-
-        echo "Equipamento: " . equipamento($equipamento_escolhido);
-    }
-
-    ?>
+    
 
 </body>
 
