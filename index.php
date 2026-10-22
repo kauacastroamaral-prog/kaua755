@@ -15,6 +15,7 @@
             <h2>Kauã <span>Castro</span></h2>
         </div>
 
+        <img src="" alt="">
         <nav>
             <a href="#inicio">Início</a>
             <a href="#sobre">Sobre</a>
