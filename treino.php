@@ -19,13 +19,13 @@
     <h2>ATIVIDADE 1: escolha a resposta correta</h2>
     <form>
         <input type="radio" value="Carro" id ="p1a">
-        <label for="p1a"></label> 
-        <input type="radio" value="Moto" id ="p2a">
-        <label for="p2a"></label> 
-        <input type="radio" value="Bicicleta" id ="p3a">
-        <label for="p3a"></label> 
-        <input type="radio" value="Esqueite" id ="p1a">
-        <label for="p4a"></label> 
+        <label for="p1a">Carro</label> <br>
+        <input type="radio" value="Moto" id ="p1b">
+        <label for="p1b">Moto</label> <br>
+        <input type="radio" value="Bicicleta" id ="p1c">
+        <label for="p1c">Bicicleta</label> <br>
+        <input type="radio" value="Esqueite" id ="p1d">
+        <label for="p1d">Esqueite</label><br> 
     </form>
    </section>
    </main>
