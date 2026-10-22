@@ -1,0 +1,803 @@
+Estrutura básica de um documento HTML
+Todo documento HTML moderno começa com uma estrutura semelhante a esta:
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro site</title>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Este é meu primeiro site.</p>
+</body>
+</html>
+O que cada parte faz:
+
+<!DOCTYPE html> — informa que o documento utiliza HTML5.
+
+<html> — elemento principal da página.
+
+<head> — contém configurações e metadados.
+
+<meta charset="UTF-8"> — permite exibir acentos corretamente.
+
+<meta name="viewport"> — ajuda a adaptar o site a celulares.
+
+<title> — define o título da aba do navegador.
+
+<body> — contém o conteúdo da página.
+
+<h1> — cria o título principal.
+
+<p> — cria um parágrafo.
+
+3. Principais tags HTML e como usar
+HTML possui muitas tags, e algumas são específicas para determinados tipos de conteúdo. A seguir estão as principais, organizadas por categoria.
+
+3.1 Títulos e textos
+<h1> até <h6>
+
+Títulos do maior nível de importância ao menor.
+
+Exemplo: <h1>Título principal</h1>
+
+<p>
+
+Cria um parágrafo.
+
+Exemplo: <p>Meu texto aqui.</p>
+
+<br>
+
+Quebra a linha.
+
+Exemplo: Primeira linha<br>Segunda linha
+
+<hr>
+
+Cria uma divisão temática, normalmente uma linha horizontal.
+
+Exemplo: <hr>
+
+<strong>
+
+Indica importância; normalmente aparece em negrito.
+
+Exemplo: <strong>Atenção!</strong>
+
+<b>
+
+Destaca visualmente em negrito.
+
+Exemplo: <b>Texto em negrito</b>
+
+<em>
+
+Dá ênfase ao texto.
+
+Exemplo: <em>Texto enfatizado</em>
+
+<i>
+
+Representa texto em uma voz ou estilo diferente.
+
+Exemplo: <i>Termo estrangeiro</i>
+
+<u>
+
+Marca um trecho com anotação visual, normalmente sublinhado.
+
+Exemplo: <u>Texto marcado</u>
+
+<s>
+
+Indica conteúdo que deixou de ser válido ou relevante.
+
+Exemplo: <s>R$ 100</s>
+
+<small>
+
+Texto de menor destaque, como observações.
+
+Exemplo: <small>Termos e condições</small>
+
+<mark>
+
+Realça um trecho.
+
+Exemplo: <mark>Importante</mark>
+
+<sub> e <sup>
+
+Texto subscrito e sobrescrito.
+
+Exemplo: H<sub>2</sub>O e x<sup>2</sup>
+
+<pre> e <code>
+
+Exibem texto pré-formatado e trechos de código.
+
+Exemplo: <pre><code>echo 'Olá';</code></pre>
+
+<blockquote>
+
+Citação em bloco.
+
+Exemplo: <blockquote>Uma citação.</blockquote>
+
+<q>
+
+Citação curta dentro do texto.
+
+Exemplo: <q>Olá!</q>
+
+<abbr>
+
+Marca uma abreviação.
+
+Exemplo: <abbr title="HyperText Markup Language">HTML</abbr>
+
+<cite>
+
+Indica o título de uma obra citada.
+
+Exemplo: <cite>Dom Casmurro</cite>
+
+<time>
+
+Representa uma data ou hora.
+
+Exemplo: <time datetime="2026-10-22">22/10/2026</time>
+
+<span>
+
+Agrupa um trecho em linha para aplicar estilos ou manipulações.
+
+Exemplo: <span class="destaque">Olá</span>
+
+3.2 Links, imagens e mídia
+Tag
+
+Para que serve
+
+Exemplo
+
+<a>
+
+Cria um link
+
+<a href="https://example.com">Abrir</a>
+
+<img>
+
+Exibe uma imagem
+
+<img src="foto.jpg" alt="Foto">
+
+<picture>
+
+Permite imagens alternativas
+
+<picture>...</picture>
+
+<source>
+
+Define uma fonte de mídia
+
+<source src="video.mp4">
+
+<audio>
+
+Reproduz áudio
+
+<audio controls src="som.mp3"></audio>
+
+<video>
+
+Reproduz vídeo
+
+<video controls src="video.mp4"></video>
+
+<track>
+
+Adiciona legendas ou faixas de texto
+
+<track kind="captions" src="legenda.vtt">
+
+<figure>
+
+Agrupa uma mídia ou ilustração
+
+<figure>...</figure>
+
+<figcaption>
+
+Legenda de uma figura
+
+<figcaption>Minha foto</figcaption>
+
+<iframe>
+
+Incorpora outra página ou conteúdo
+
+<iframe src="pagina.html" title="Conteúdo"></iframe>
+
+<map> e <area>
+
+Criam áreas clicáveis em uma imagem
+
+<map name="mapa">...</map>
+
+Exemplos completos:
+
+<!-- Link -->
+<a href="https://www.google.com" target="_blank" rel="noopener">
+    Abrir Google
+</a>
+
+<!-- Imagem -->
+<img src="foto.jpg" alt="Paisagem" width="300">
+
+<!-- Áudio -->
+<audio controls>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+</audio>
+
+<!-- Vídeo -->
+<video controls width="400">
+    <source src="video.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+</video>
+O atributo alt descreve a imagem para leitores de tela e também ajuda quando ela não carrega.
+
+3.3 Listas
+Tag
+
+Função
+
+<ul>
+
+Lista sem ordem numérica
+
+<ol>
+
+Lista ordenada
+
+<li>
+
+Item de uma lista
+
+<dl>
+
+Lista de descrições
+
+<dt>
+
+Termo descrito
+
+<dd>
+
+Descrição do termo
+
+<h2>Lista de compras</h2>
+<ul>
+    <li>Arroz</li>
+    <li>Feijão</li>
+    <li>Leite</li>
+</ul>
+
+<h2>Passos para estudar</h2>
+<ol>
+    <li>Aprender HTML</li>
+    <li>Aprender CSS</li>
+    <li>Aprender PHP</li>
+</ol>
+
+<dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação.</dd>
+    <dt>PHP</dt>
+    <dd>Linguagem de programação para servidores.</dd>
+</dl>
+3.4 Tabelas
+Tag
+
+Função
+
+<table>
+
+Cria a tabela
+
+<caption>
+
+Título da tabela
+
+<thead>
+
+Agrupa o cabeçalho
+
+<tbody>
+
+Agrupa o conteúdo principal
+
+<tfoot>
+
+Agrupa o rodapé
+
+<tr>
+
+Cria uma linha
+
+<th>
+
+Cria uma célula de cabeçalho
+
+<td>
+
+Cria uma célula de dados
+
+<colgroup>
+
+Agrupa colunas para formatação
+
+<col>
+
+Define propriedades de uma coluna
+
+Exemplo:
+
+<table>
+    <caption>Notas dos alunos</caption>
+    <thead>
+        <tr>
+            <th>Aluno</th>
+            <th>Nota</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ana</td>
+            <td>9,5</td>
+        </tr>
+        <tr>
+            <td>João</td>
+            <td>8,0</td>
+        </tr>
+    </tbody>
+</table>
+3.5 Formulários — muito importantes para PHP
+Formulários são usados para enviar informações do navegador para o servidor.
+
+Tag
+
+Função
+
+<form>
+
+Define o formulário
+
+<label>
+
+Identifica um campo
+
+<input>
+
+Campo de entrada
+
+<textarea>
+
+Campo de texto longo
+
+<button>
+
+Botão
+
+<select>
+
+Lista de opções
+
+<option>
+
+Opção da lista
+
+<optgroup>
+
+Agrupa opções
+
+<fieldset>
+
+Agrupa campos relacionados
+
+<legend>
+
+Título do grupo
+
+<datalist>
+
+Sugestões para um campo
+
+<output>
+
+Exibe o resultado de um cálculo
+
+<progress>
+
+Indica progresso
+
+<meter>
+
+Indica um valor dentro de uma faixa
+
+Tipos comuns do <input>:
+
+text — texto.
+
+password — senha.
+
+email — e-mail.
+
+number — número.
+
+date — data.
+
+time — horário.
+
+checkbox — caixa de seleção.
+
+radio — opção exclusiva dentro de um grupo.
+
+file — envio de arquivo.
+
+submit — envio do formulário.
+
+reset — restauração dos campos.
+
+tel — telefone.
+
+url — endereço de site.
+
+search — campo de pesquisa.
+
+hidden — valor não exibido como campo visível.
+
+range — controle deslizante.
+
+color — seletor de cor.
+
+month — mês e ano.
+
+week — semana do ano.
+
+datetime-local — data e hora locais.
+
+Exemplo:
+
+<form action="receber.php" method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" min="1">
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem"></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+Atenção: o atributo name é essencial para que os campos sejam enviados com seus nomes para o PHP. O atributo id ajuda a associar o campo ao seu label.
+
+method="GET": envia dados pela URL, útil para buscas e filtros.
+
+method="POST": envia dados no corpo da requisição, comum em cadastros.
+
+action="receber.php": indica qual arquivo receberá os dados.
+
+3.6 Tags semânticas e de estrutura
+Essas tags ajudam a organizar o conteúdo e deixam o significado de cada parte mais claro.
+
+Tag
+
+Uso
+
+<header>
+
+Cabeçalho da página ou seção
+
+<nav>
+
+Área de navegação
+
+<main>
+
+Conteúdo principal
+
+<section>
+
+Seção temática
+
+<article>
+
+Conteúdo independente
+
+<aside>
+
+Conteúdo complementar
+
+<footer>
+
+Rodapé
+
+<address>
+
+Informações de contato
+
+<div>
+
+Contêiner genérico em bloco
+
+<search>
+
+Área de pesquisa
+
+<details>
+
+Conteúdo expansível
+
+<summary>
+
+Título do conteúdo expansível
+
+<dialog>
+
+Caixa de diálogo
+
+<hgroup>
+
+Agrupa título e conteúdo relacionado
+
+Exemplo:
+
+<header>
+    <h1>Meu portal</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Notícias</h2>
+        <article>
+            <h3>Primeira notícia</h3>
+            <p>Conteúdo da notícia.</p>
+        </article>
+    </section>
+
+    <aside>
+        Conteúdo complementar.
+    </aside>
+</main>
+
+<footer>
+    <p>Todos os direitos reservados.</p>
+</footer>
+3.7 Tags para scripts e recursos
+Tag
+
+Função
+
+<script>
+
+Inclui ou carrega JavaScript
+
+<noscript>
+
+Conteúdo alternativo sem JavaScript
+
+<style>
+
+Define CSS na página
+
+<link>
+
+Vincula recursos, como folhas CSS
+
+<meta>
+
+Define metadados
+
+<base>
+
+Define a URL base para links relativos
+
+<template>
+
+Guarda conteúdo HTML que não é exibido imediatamente
+
+Exemplo:
+
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="description" content="Meu site de estudos">
+</head>
+
+<body>
+    <script src="script.js" defer></script>
+    <noscript>Ative o JavaScript para usar todos os recursos.</noscript>
+</body>
+3.8 Tags especiais e menos comuns
+<ruby>, <rt> e <rp> — anotações de pronúncia, usadas principalmente em idiomas asiáticos.
+
+<bdi> — isola um trecho cuja direção do texto pode ser diferente.
+
+<bdo> — força a direção do texto com dir.
+
+<wbr> — indica um ponto possível de quebra de linha.
+
+<data> — associa um conteúdo legível a um valor de máquina.
+
+<ins> — indica conteúdo inserido.
+
+<del> — indica conteúdo removido.
+
+<menu> — representa uma lista de comandos ou itens.
+
+<slot> — define um espaço de conteúdo em Web Components.
+
+<elemento-personalizado> — elementos com nomes próprios podem ser criados seguindo as regras de Web Components.
+
+Algumas tags antigas, como <font>, <center>, <marquee>, <big>, <strike> e <frameset>, são obsoletas ou não recomendadas. Prefira CSS e os elementos modernos equivalentes.
+
+4. Atributos HTML que você precisa conhecer
+Atributos fornecem informações adicionais para as tags.
+
+Atributo
+
+Uso
+
+Exemplo
+
+id
+
+Identificador único
+
+id="menu"
+
+class
+
+Classe para CSS ou JavaScript
+
+class="azul"
+
+style
+
+Estilo direto
+
+style="color: red"
+
+title
+
+Informação complementar
+
+title="Saiba mais"
+
+href
+
+Destino de um link
+
+href="sobre.html"
+
+src
+
+Origem de mídia
+
+src="foto.jpg"
+
+alt
+
+Descrição de imagem
+
+alt="Cachorro"
+
+name
+
+Nome enviado no formulário
+
+name="usuario"
+
+value
+
+Valor de um campo
+
+value="Ana"
+
+placeholder
+
+Texto de orientação
+
+placeholder="Seu nome"
+
+required
+
+Campo obrigatório
+
+<input required>
+
+disabled
+
+Desabilita um controle
+
+<button disabled>
+
+readonly
+
+Campo não editável pelo usuário
+
+<input readonly>
+
+checked
+
+Opção marcada inicialmente
+
+<input type="checkbox" checked>
+
+selected
+
+Opção selecionada inicialmente
+
+<option selected>
+
+min / max
+
+Limites numéricos ou de data
+
+min="1" max="100"
+
+maxlength
+
+Tamanho máximo do texto
+
+maxlength="50"
+
+target
+
+Onde abrir o link
+
+target="_blank"
+
+method
+
+Método de envio
+
+method="POST"
+
+action
+
+Destino do formulário
+
+action="salvar.php"
+
+autocomplete
+
+Sugestões automáticas
+
+autocomplete="email"
+
+data-*
+
+Dados personalizados
+
+data-id="15"
+
+aria-label
+
+Nome acessível para leitores de tela
+
+aria-label="Fechar"

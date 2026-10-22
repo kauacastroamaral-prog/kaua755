@@ -1,0 +1,378 @@
+Introdução ao PHP
+PHP executa código no servidor. O navegador normalmente recebe o HTML gerado pelo PHP, e não o código PHP original.
+
+5.1 Como escrever PHP
+
+php
+<?php
+echo "Olá, mundo!";
+?>
+<?php — inicia o código PHP.
+
+echo — exibe conteúdo.
+
+"Olá, mundo!" — texto entre aspas.
+
+; — encerra a instrução.
+
+?> — fecha o bloco PHP quando necessário.
+
+Em arquivos exclusivamente PHP, geralmente é melhor omitir o fechamento ?> para evitar espaços acidentais na saída.
+
+5.2 Variáveis
+Variáveis armazenam valores. Em PHP, começam com $.
+
+
+php
+<?php
+$nome = "Maria";
+$idade = 20;
+$altura = 1.65;
+$estudante = true;
+
+echo $nome;
+echo $idade;
+?>
+Tipos de dados comuns:
+
+string — texto.
+
+int — número inteiro.
+
+float — número decimal.
+
+bool — verdadeiro ou falso.
+
+array — conjunto de valores.
+
+null — ausência de valor.
+
+5.3 Concatenação
+O ponto (.) une textos e variáveis.
+
+
+php
+<?php
+$nome = "Carlos";
+$idade = 25;
+
+echo "Meu nome é " . $nome . " e tenho " . $idade . " anos.";
+?>
+5.4 Condições: if, elseif e else
+
+php
+<?php
+$idade = 18;
+
+if ($idade >= 18) {
+    echo "Maior de idade";
+} else {
+    echo "Menor de idade";
+}
+?>
+Use condições para decidir o que o sistema deve fazer.
+
+5.5 Operadores importantes
+Operador
+
+Significado
+
++
+
+Soma
+
+-
+
+Subtração
+
+*
+
+Multiplicação
+
+/
+
+Divisão
+
+%
+
+Resto da divisão
+
+**
+
+Potência
+
+==
+
+Igualdade com comparação de tipos flexível
+
+===
+
+Igualdade de valor e tipo
+
+!=
+
+Diferente
+
+!==
+
+Diferente em valor ou tipo
+
+> / <
+
+Maior / menor
+
+>= / <=
+
+Maior ou igual / menor ou igual
+
+&&
+
+E lógico
+
+\|\|
+
+OU lógico
+
+!
+
+Negação
+
+??
+
+Valor alternativo quando o valor é nulo ou inexistente
+
+=
+
+Atribuição
+
+.=
+
+Concatenação com atribuição
+
+++ / --
+
+Incremento / decremento
+
+5.6 Repetições: for, while e foreach
+
+php
+<?php
+// FOR
+for ($i = 1; $i <= 5; $i++) {
+    echo $i . "<br>";
+}
+
+// WHILE
+$i = 1;
+while ($i <= 3) {
+    echo $i . "<br>";
+    $i++;
+}
+
+// FOREACH
+$frutas = ["Maçã", "Banana", "Uva"];
+
+foreach ($frutas as $fruta) {
+    echo $fruta . "<br>";
+}
+?>
+for: útil quando você conhece a estrutura da repetição.
+
+while: repete enquanto uma condição for verdadeira.
+
+foreach: percorre arrays e coleções.
+
+5.7 Arrays
+
+php
+<?php
+$frutas = ["Maçã", "Banana", "Uva"];
+
+echo $frutas[0]; // Maçã
+
+$aluno = [
+    "nome" => "Ana",
+    "nota" => 9
+];
+
+echo $aluno["nome"];
+echo $aluno["nota"];
+?>
+5.8 Funções
+Funções permitem reutilizar código.
+
+
+php
+<?php
+function somar($a, $b) {
+    return $a + $b;
+}
+
+$resultado = somar(10, 5);
+echo $resultado; // 15
+?>
+5.9 Receber dados com GET e POST
+O PHP utiliza as variáveis superglobais $_GET e $_POST para acessar dados de formulários enviados pelos respectivos métodos.
+
+
+php
+<?php
+$nome = $_POST["nome"] ?? "";
+
+echo "Olá, " . htmlspecialchars($nome, ENT_QUOTES, "UTF-8");
+?>
+htmlspecialchars() ajuda a impedir que texto fornecido pelo usuário seja interpretado como HTML ao ser exibido na página.
+
+6. Exemplo completo: HTML + PHP
+Vamos criar um formulário que pede o nome e a idade e retorna uma mensagem.
+
+Crie um arquivo chamado index.php:
+
+
+php
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de aluno</title>
+</head>
+<body>
+    <h1>Cadastro de aluno</h1>
+
+    <form method="POST" action="">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <br><br>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade"
+               min="0" max="120" required>
+
+        <br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $nome = trim($_POST["nome"] ?? "");
+        $idadeTexto = $_POST["idade"] ?? "";
+
+        if (
+            $nome !== "" &&
+            filter_var($idadeTexto, FILTER_VALIDATE_INT) !== false &&
+            (int)$idadeTexto >= 0 &&
+            (int)$idadeTexto <= 120
+        ) {
+            $idade = (int)$idadeTexto;
+
+            echo "<h2>Cadastro recebido!</h2>";
+            echo "<p>Nome: " .
+                htmlspecialchars($nome, ENT_QUOTES, "UTF-8") .
+                "</p>";
+            echo "<p>Idade: " . $idade . "</p>";
+
+            if ($idade >= 18) {
+                echo "<p>Você é maior de idade.</p>";
+            } else {
+                echo "<p>Você é menor de idade.</p>";
+            }
+        } else {
+            echo "<p>Informe um nome e uma idade válida.</p>";
+        }
+    }
+    ?>
+</body>
+</html>
+Como funciona esse exemplo?
+O HTML cria os campos de nome e idade.
+
+O formulário envia os dados usando POST.
+
+O PHP verifica se o formulário foi enviado.
+
+trim() remove espaços extras do início e do final do nome.
+
+filter_var() valida se a idade é um número inteiro.
+
+htmlspecialchars() protege a saída do nome contra interpretação indevida de HTML.
+
+if decide qual mensagem mostrar com base na idade.
+
+Como executar
+Você precisa de um ambiente com PHP instalado, como o XAMPP, ou de outro servidor PHP.
+
+Salve o código como index.php.
+
+Coloque o arquivo na pasta de projetos do seu ambiente, por exemplo htdocs no XAMPP.
+
+Inicie o servidor Apache.
+
+Acesse http://localhost/index.php no navegador.
+
+Não basta abrir o arquivo PHP diretamente com duplo clique: o PHP precisa ser executado por um servidor.
+
+7. Como organizar um projeto HTML e PHP
+Uma estrutura simples pode ser assim:
+
+
+text
+meu-projeto/
+├── index.php
+├── cadastro.php
+├── conexao.php
+├── css/
+│   └── estilo.css
+├── js/
+│   └── script.js
+└── imagens/
+    └── logo.png
+index.php: página inicial.
+
+cadastro.php: processamento de cadastro.
+
+conexao.php: conexão com o banco de dados, quando necessário.
+
+css/estilo.css: aparência do site.
+
+js/script.js: interações executadas no navegador.
+
+imagens/: arquivos de imagem.
+
+Para projetos reais, também é importante validar dados no servidor, usar consultas preparadas para SQL, proteger sessões e autenticação e não armazenar senhas em texto puro.
+
+8. Exercícios para praticar
+Sua lista de estudos
+0 de 5 concluídos
+
+
+Criar uma página com h1, p e img.
+
+Montar uma lista com ul e li.
+
+Criar um formulário com nome e e-mail.
+
+Usar PHP para receber os dados com POST.
+
+Criar uma condição que verifica a idade.
+9. Resumo: o que aprender primeiro?
+Uma boa ordem de estudo é:
+
+HTML básico: estrutura, textos, links e imagens.
+
+Formulários: form, input, label e button.
+
+CSS: cores, fontes, espaçamentos e layout.
+
+PHP: variáveis, operadores, condições e repetições.
+
+Formulários em PHP: receber e validar dados.
+
+Arrays e funções.
+
+Banco de dados MySQL com PHP e PDO.
+
+Sessões, login, segurança e criação de sistemas completos.
