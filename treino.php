@@ -15,7 +15,8 @@
     <section> <h2>Irei fazer atividades aqui</h2>
     <p>Primeira atividade vai ser de marca a alternativa correta!!</p>
    </section>
-   <section>
+<!--Pergunta 1 teste-->
+      <section>
     <h2>ATIVIDADE 1: escolha a resposta correta</h2>
     <form>
         <input type="radio" value="Carro" id ="p1a">
@@ -28,6 +29,15 @@
         <label for="p1d">Esqueite</label><br> 
     </form>
    </section>
+<!--Pergunta 2 teste-->
+   <section>
+    <h2>ATividade 2</h2>
+    <p>essa atividade é sobre escrita</p>
+    <form >
+        <input type="text">
+    </form>
+   </section>
+
    </main>
 </body>
 </html>
