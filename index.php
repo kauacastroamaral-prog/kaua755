@@ -149,9 +149,9 @@
                         <div class="tecnologias">
                             <span>HTML</span>
                             <span>CSS</span>
-                            < span>PHP</span -->
+                            <span>banco de dados</span>
                         </div>
-                        <a href="/db1.php">Ver projeto</a>
+                        <a href="atividades/db1.php">Ver projeto</a>
                     </div>
                 </div>
             </section>
