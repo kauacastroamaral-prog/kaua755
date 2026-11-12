@@ -144,7 +144,7 @@
                         <div class="numero-projeto">
                             04
                         </div>
-                        <h3>Sistema de cadastro</h3>
+                        <h3>Sistema de BD</h3>
                         <p>Descrição do sistema de cadastro</p>
                         <div class="tecnologias">
                             <span>HTML</span>
