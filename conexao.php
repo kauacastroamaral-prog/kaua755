@@ -10,10 +10,10 @@
 $host = 'localhost' ;
     // - host é onde roda
 
-$db = 'hellinton755' ;
+$db = 'kaua755' ;
     // - banco de dados dentro do mysql
 
-$user = 'hellinton755' ;
+$user = 'kaua755' ;
     // - usuario
 
 $pass = '755!@#' ;
