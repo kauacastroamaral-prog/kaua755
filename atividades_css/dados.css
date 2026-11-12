@@ -13,3 +13,25 @@ body{
     color: #d42020;
     line-height: 1.6;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*===============================*/
+/*            MENU               */
+/*===============================*/
+
+header {
+    height: 80px;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #030318;
+    border-bottom: 1px solid #cfcfe2;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
