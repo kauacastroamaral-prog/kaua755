@@ -21,7 +21,7 @@ O que cada parte faz:
 
 <head> — contém configurações e metadados.
 
-<meta charset="UTF-8"> — permite exibir acentos corretamente.
+<meta charset="UTF-8"> — permite exibir acentos corretamente.IUIUTUIYU
 
 <meta name="viewport"> — ajuda a adaptar o site a celulares.
 
