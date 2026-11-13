@@ -208,6 +208,7 @@ $produtos = $resultado->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="../atividades_css/dados.css">
 </head>
 
 <body>
