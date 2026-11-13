@@ -151,7 +151,7 @@
                             <span>CSS</span>
                             <span>banco de dados</span>
                         </div>
-                        <a href="atividades 3/loja_informatic.php">Ver projeto</a>
+                        <a href="atividade 3/loja_informatic.php">Ver projeto</a>
                     </div>
                 </div>
             </section>
