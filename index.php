@@ -1,17 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kauã Castro | Portfólio</title>
     <link rel="stylesheet" href="atividades_css/portifolio.css">
 </head>
+
 <body>
     <!--   MENU   -->
     <header>
         <div class="logo">
-            
+
             <h2>Kauã <span>Castro</span></h2>
         </div>
 
@@ -25,10 +26,10 @@
     </header>
 
     <!--   CONTEÚDO PRINCIPAL   -->
-    
+
     <main>
         <!--   SEÇÂO DE INÍCIO   -->
-           <section id="inicio" class="inicio">
+        <section id="inicio" class="inicio">
             <div class="inicio-conteudo">
                 <p class="apresentacao">Olá, eu sou</p>
                 <h1>Kauã Castro</h1>
@@ -42,43 +43,43 @@
                 <a href="#projetos" class="botao">Ver projetos</a>
                 <a href="#contato" class="botao botao-secundario">Entrar em contato</a>
             </div>
-           </section>
+        </section>
 
-           <!--   SOBRE   -->
-            <section id="sobre" class="sobre">
-                <div class="titulo-secao">
-                    <p>Conheça um pouco</p>
-                    <h2>Sobre mim</h2>
+        <!--   SOBRE   -->
+        <section id="sobre" class="sobre">
+            <div class="titulo-secao">
+                <p>Conheça um pouco</p>
+                <h2>Sobre mim</h2>
+            </div>
+
+            <div class="sobre-conteudo">
+                <div class="sobre-texto">
+                    <p>
+                        Sou Desenvolvedor de software e apaixonado por tecnologia. Gosto de aprender novas ferramentas e criar novos projetos que resolvam problemas reais.
+                    </p>
+                    <p>
+                        Atualmente estudo desenvolvimento de sistemas e trabalho com diferente tecnologias para construir aplicações modernas e funcionais.
+                    </p>
                 </div>
-
-                <div class="sobre-conteudo">
-                    <div class="sobre-texto"> 
-                        <p>
-                            Sou Desenvolvedor de software e apaixonado por tecnologia. Gosto de aprender novas ferramentas e criar novos projetos que resolvam problemas reais.
-                        </p>
-                        <p>
-                            Atualmente estudo desenvolvimento de sistemas e trabalho com diferente tecnologias para construir aplicações modernas e funcionais.
-                        </p>
+                <div class="habilidades">
+                    <div class="habilidade">
+                        <h3>HTML</h3>
+                        <p>Estruturação de páginas web.</p>
                     </div>
-                    <div class="habilidades">
-                        <div class="habilidade">
-                            <h3>HTML</h3>
-                            <p>Estruturação de páginas web.</p>
-                        </div>  
-                        <div class="habilidade">
-                            <h3>CSS</h3>
-                            <p>Estilização e criação de interface.</p>
-                        </div>
-                        <!--  div class="habilidade">
+                    <div class="habilidade">
+                        <h3>CSS</h3>
+                        <p>Estilização e criação de interface.</p>
+                    </div>
+                    <!--  div class="habilidade">
                             <h3>PHP</h3>
                             <p>Desenvolvimento de aplicações web.</p>
                         </div  -->
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="projetos" class="projetos-secao">
-                <div class="projetos">
+        <section id="projetos" class="projetos-secao">
+            <div class="projetos">
 
                 <!-- PROJETO 1 -->
 
@@ -123,38 +124,38 @@
                 </div>
 
 
-                    <!--PROJETO 3  -->
-                    <div class="card">
-                        <div class="numero-projeto">
-                            03
-                        </div>
-                        <h3>Sistema de cadastro</h3>
-                        <p>Descrição do sistema de cadastro</p>
-                        <div class="tecnologias">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            < span>PHP</span -->
-                        </div>
-                        <a href="/helpdesk.php">Ver projeto</a>
+
+                <!-- PROJETO 3 -->
+                <div class="card">
+                    <div class="numero-projeto">03</div>
+                    <h3>Sistema de cadastro</h3>
+                    <p>Descrição do sistema de cadastro</p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
                     </div>
+
+                    <a href="/helpdesk.php">Ver projeto</a>
                 </div>
 
-                <!--PROJETO 4 -->
-                    <div class="card">
-                        <div class="numero-projeto">
-                            04
-                        </div>
-                        <h3>Sistema de BD</h3>
-                        <p>Descrição do sistema de cadastro</p>
-                        <div class="tecnologias">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>banco de dados</span>
-                        </div>
-                        <a href="atividade 3/loja_informatic.php">Ver projeto</a>
+                <!-- PROJETO 4 -->
+                <div class="card">
+                    <div class="numero-projeto">04</div>
+                    <h3>Sistema de BD</h3>
+                    <p>Descrição do sistema de cadastro</p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Banco de dados</span>
                     </div>
+
+                    <a href="./atividade%203/loja_informatic.php">Ver projeto</a>
                 </div>
-            </section>
+
+            </div>
 
             <section id="contato" class="contato">
                 <div class="titulo-secao">
@@ -177,6 +178,7 @@
         <p>
             HTML + CSS
         </p>
-    </footer>  
+    </footer>
 </body>
+
 </html>
