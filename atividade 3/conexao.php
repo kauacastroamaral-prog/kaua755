@@ -1,51 +1,29 @@
-<?php 
 
-// host = 'localhost' -> roda na máquina
-// host = '194.61.238.119' -> roda na VPS
+<?php
 
-// - MySQL - > SGBD
+$host = 'localhost';
+$db = 'kaua755';
+$user = 'kaua755';
+$pass = '755!@#';
+$charset = 'utf8mb4';
 
-// - PDO - > Interfaçe do PHP que permite conversar com o banco de dados
-
-$host = 'localhost' ;
-    // - host é onde roda
-
-$db = 'kaua755' ;
-    // - banco de dados dentro do mysql
-
-$user = 'kaua755' ;
-    // - usuario
-
-$pass = '755!@#' ;
-    // - senha
-
-
-$charset = 'utf8mb4' ;
-    // - serve para ler caracteres especiais
-
-
-    // - o try funciona como um IF, tipo "tente conectar"
 try {
 
-    // - definindo variáveis no PDO
-    // - usuario e senha ficam de fora das aspas duplas
-    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=$charset",
+    $pdo = new PDO(
+        "mysql:host=$host;dbname=$db;charset=$charset",
         $user,
-        $pass   
+        $pass
     );
-
 
     $pdo->setAttribute(
         PDO::ATTR_ERRMODE,
         PDO::ERRMODE_EXCEPTION
     );
 
-    echo "CONECTADO COM ÊXITO";
-
 } catch (PDOException $e) {
-    echo "ERRO AO CONECTAR AO BANCO DE DADOS: ";
-    echo $e->getMessage();
-}
 
+    die("Erro ao conectar ao banco de dados.");
+
+}
 
 ?>
